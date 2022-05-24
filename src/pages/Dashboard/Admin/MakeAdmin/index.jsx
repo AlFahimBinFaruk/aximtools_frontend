@@ -17,9 +17,7 @@ const MakeAdmin = () => {
     if (isLoading) {
         return <LoadingSpinner />
     }
-    if (isError) {
-        return <h4>Some error occured.</h4>
-    }
+    
     return (
         <div className="make-admin">
             <h5>Userlist</h5>

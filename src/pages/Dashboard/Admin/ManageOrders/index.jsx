@@ -5,9 +5,8 @@ import { getAllOrderList } from "../../../../features/order/orderSlice"
 import { useDispatch, useSelector } from "react-redux"
 import LoadingSpinner from "../../../../common_components/LoadingSpinner"
 const ManageOrders = () => {
-    const [count, setcount] = useState([1, 2, 3, 4, 5, 6])
     //get initial state from order store
-    const { orderList, isLoading, isError } = useSelector(
+    const { orderList, isLoading } = useSelector(
         (state) => state.order
     );
     const dispatch = useDispatch();
@@ -19,9 +18,7 @@ const ManageOrders = () => {
     if (isLoading) {
         return <LoadingSpinner />
     }
-    if (isError) {
-        return <h4>Some error occured.</h4>
-    }
+    
     return (
         <div className="manage-orders">
             <h5>Manage Orders</h5>
