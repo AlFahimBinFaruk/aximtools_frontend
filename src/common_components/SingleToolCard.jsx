@@ -18,7 +18,7 @@ const SingleToolCard = ({ _id, name, price, thumbURL, minQty, availQty, shortDes
     }
     return (
         <MDBCard className="shadow rounded-0 h-100">
-            {thumbURL}
+            <h4>url ={thumbURL}</h4>
             <MDBCardImage className="rounded-0" src='https://mdbootstrap.com/img/new/standard/nature/184.webp' position='top' alt='...' />
             <MDBCardBody>
                 <h6 className="text-dark">{name}</h6>

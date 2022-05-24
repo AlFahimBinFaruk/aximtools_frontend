@@ -22,7 +22,7 @@ const AddProduct = () => {
     });
 
     const { name, price, minQty, availQty, shortDesc } = formData;
-    const [thumbURL, setThumbURL] = useState("")
+    const [thumbURL, setThumbURL] = useState(null)
     //handle change of input
     const handleChange = (e) => {
         setFormData((prevState) => {
@@ -35,7 +35,6 @@ const AddProduct = () => {
 
     //uploa thub
     const uploadThumb = (file) => {
-        console.log("file",file.name)
         const storageRef = ref(storage, file.name);
         let uploadTask = uploadBytesResumable(storageRef, file);
         //get the upload progress reting.
@@ -75,7 +74,7 @@ const AddProduct = () => {
             let tool = {
                 name,
                 price,
-                thumbURL,
+                thumbURL: thumbURL,
                 minQty,
                 availQty,
                 shortDesc
