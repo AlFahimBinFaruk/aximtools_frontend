@@ -2,9 +2,8 @@ const ProductDetails = ({ name, price, thumbURL, minQty, availQty, shortDesc }) 
   return (
     <div className="product-details d-flex justify-content-evenly align-items-center flex-wrap">
       {/* img */}
-      {thumbURL}
       <div className="product-image ">
-        <img src="https://mdbootstrap.com/img/new/standard/nature/184.webp" className='object-contain' width={250} height={250} alt="" />
+        <img src={thumbURL} className='object-contain' width={250} height={250} alt="" />
       </div>
       {/* details */}
       <div className="details col-lg-6">
